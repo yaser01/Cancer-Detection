@@ -20,6 +20,9 @@
     "react-simple-image-slider": "^2.4.1",
     "styled-components": "^5.2.3"
   },
+  "engines": {
+    "node": "16.14.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
