@@ -1,6 +1,7 @@
 {
   "name": "quizz-react",
   "version": "0.1.0",
+  "main": "index.js",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -28,9 +29,8 @@
     "npm": "8.3.1"
   },
   "scripts": {
-    "dev-server": "webpack-dev-server --open",
     "start": "node server.js",
-    "build": "webpack -p",
+    "build": "npm run build",
     "heroku-postbuild": "npm run build"
     
   },
