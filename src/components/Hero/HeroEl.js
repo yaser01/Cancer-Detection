@@ -81,6 +81,7 @@ export const HeroH1 = styled.h1`
  text-align: center;
  background: #002D62;
  padding: 10px 22px;
+ background-color:rgba(0, 45, 98,0.8);
 
  @media screen and (max-width: 768px)
  {
