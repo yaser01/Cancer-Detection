@@ -245,7 +245,7 @@ width:100%;
 height:100%;
 background:rgba(0,0,0,0.3);
 visibility: ${({shown}) => (shown ? "visible" : "hidden")};
-}
+
 `;
 
 export const WindMillDots=styled.div`

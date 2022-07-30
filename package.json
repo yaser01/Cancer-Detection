@@ -19,7 +19,7 @@
     "react-native-web": "^0.16.1",
     "react-primitives": "^0.8.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.1",
     "react-scroll": "^1.8.2",
     "react-simple-image-slider": "^2.4.1",
     "styled-components": "^5.2.3"

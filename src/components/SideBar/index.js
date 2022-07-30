@@ -5,14 +5,14 @@ import {IconContext} from 'react-icons/lib'
 import {animateScroll as scroll} from 'react-scroll';
 const Sidebar = ({isOpen , toggle} ) => {
     return (
-        <div>
+        
         <SidebarContainer isOpen={isOpen} onClick={toggle} >
             <Icon onClick={toggle} >
                 <CloseIcon />
             </Icon>
             <SidebarWrapper>
               <SidebarMenu>
-                <SidebarLink   onClick={toggle}>
+                <SidebarLink to="/ourtest"  onClick={toggle}>
                     Our Tests
                 </SidebarLink>
                 <SidebarLink to="/services" onClick={toggle}>
@@ -28,7 +28,7 @@ const Sidebar = ({isOpen , toggle} ) => {
 
             </SidebarWrapper>
         </SidebarContainer>
-        </div>
+        
     )
 }
 

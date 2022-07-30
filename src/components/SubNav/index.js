@@ -25,8 +25,8 @@ const SubNavbar = ({toggle}) => {
         scroll.scrollToTop();
     };
     return (
-        <>
-        <IconContext.Provider value={{color : 'white'}}>
+        
+ //       <IconContext.Provider value={{color : 'white'}}>
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
                 <NavLogo to='/' onClick={toggleHome} >
@@ -53,11 +53,11 @@ const SubNavbar = ({toggle}) => {
                 </NavBtn>
             </NavbarContainer>
         </Nav>
-        </IconContext.Provider>
+   //     </IconContext.Provider>
 
 
 
-        </>
+        
     )
 }
 

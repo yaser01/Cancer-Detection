@@ -14,7 +14,7 @@ const Home = () => {
         setIsOpen(!isOpen);
     };
     return (
-        <div>
+        <>
           <Sidebar  isOpen={isOpen} toggle={toggle}  />
           <SubNavbar toggle={toggle}/>
           <Hero/>
@@ -22,7 +22,7 @@ const Home = () => {
           
           <Footer/>
           
-        </div>
+        </>
     )
 }
 

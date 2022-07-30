@@ -8,7 +8,7 @@ import {ServicesContiner,ServicesH1,ServicesWrapper,ServicesCard,ServicesIcon,Se
 
 const OurTest = () => {
     return (
-        <>
+        
         <ServicesContiner id="services">
             
             
@@ -36,7 +36,7 @@ const OurTest = () => {
                 </ServicesWrapper>
 
         </ServicesContiner>
-        </>
+        
     )
 }
 
