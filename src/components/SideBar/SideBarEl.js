@@ -17,6 +17,12 @@ export const SidebarContainer = styled.aside`
  transition: 0.3s ease-in-out;
  opacity:${({ isOpen }) => (isOpen ? '90%' : '0') } ;
  top:${({ isOpen }) => (isOpen ? '0' : '-100%') };
+ visibility:hidden;
+ @media screen and (max-width: 900px)
+ {
+    visibility:visible;
+ }
+
  
 `
 export const CloseIcon = styled(FaTimes)`
@@ -64,7 +70,7 @@ export const SidebarLink = styled(LinkR)`
  cursor: pointer;
 
  &:hover {
-     color:#01bf71;
+     color:#318CE7;
      transition: 0.2s ease-in-out;
  }
 

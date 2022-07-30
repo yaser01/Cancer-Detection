@@ -17,7 +17,7 @@ background : #fff;
 color: #000;
 @media screen and (max-width : 768px)
 {
-    height:90px;
+    height:900px;
 }
 
 @media screen and (max-width : 480px)

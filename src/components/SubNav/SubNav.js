@@ -102,8 +102,8 @@ export const NavBtn = styled.nav`
 `
 
 export const NavBtnLink = styled(LinkR)`
-white-space: nowrap;
-  overflow: hidden;
+ white-space: nowrap;
+ overflow: hidden;
  color: #F0F8FF;
  font-size: large;
  font-weight: bold;
