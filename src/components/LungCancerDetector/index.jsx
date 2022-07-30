@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Timer from "../Timer";
 import {InfoContainer,InfoWrapper,InfoRow,Column1,Column2,TextWrapper,TopLine,Heading,Subtitle,LungCancerDetectorContainer,DetectorContainer,TargetImg,HiddenFileInput,SelectButton,TargetBox,UploadButtonText,Row,Row2,Result,ResultBox,LoadingGrey,WindMillDots}from "./LungCancerDetector"
 import axios from "axios";
+import sample_image from '../../image/sample.jpg';
 export default function LungCancerDetector(props) {
   const fileInputRef = useRef();
   const imageRef = useRef();
-  const [imgData, setImgData] = useState(null);
+  const [imgData, setImgData] = useState(sample_image);
   const [predictions, setPredictions] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [isFinished, setFinished] = useState(false);
@@ -34,7 +35,8 @@ export default function LungCancerDetector(props) {
     try {
     const file = e.target.files[0];
     const imgData = await readImage(file);
-    setImgData(imgData); 
+    setImgData(imgData);
+    setLoading(true);
     const imageElement = document.createElement("img");
     imageElement.src = imgData;
     imageElement.onload = async () => {
@@ -49,7 +51,7 @@ export default function LungCancerDetector(props) {
     fd.append('name',"Lung");
     console.log(fd);
     console.log("Requesest Sent");
-    axios.post("http://final5year.herokuapp.com/upload/",fd).then(
+    axios.post("https://final5year.herokuapp.com/upload/",fd).then(
       res=>{
         setFinished(true);
         console.log(res.data.message);

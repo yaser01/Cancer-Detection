@@ -3,10 +3,11 @@ import styled from "styled-components";
 import Timer from "../Timer";
 import {InfoContainer,InfoWrapper,InfoRow,Column1,Column2,TextWrapper,TopLine,Heading,Subtitle,ColonCancerDetectorContainer,DetectorContainer,TargetImg,HiddenFileInput,SelectButton,TargetBox,UploadButtonText,Row,Row2,Result,ResultBox,LoadingGrey,WindMillDots}from "./ColonCancerDetector"
 import axios from "axios";
+import sample_image from '../../image/sample.jpg';
 export default function ColonCancerDetector(props) {
   const fileInputRef = useRef();
   const imageRef = useRef();
-  const [imgData, setImgData] = useState(null);
+  const [imgData, setImgData] = useState(sample_image);
   const [predictions, setPredictions] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [isFinished, setFinished] = useState(false);
@@ -30,11 +31,11 @@ export default function ColonCancerDetector(props) {
 
   const onSelectImage = async (e) => {
     setPredictions([]);
-    setLoading(true);
     try {
     const file = e.target.files[0];
     const imgData = await readImage(file);
-    setImgData(imgData); 
+    setImgData(imgData);
+    setLoading(true);
     const imageElement = document.createElement("img");
     imageElement.src = imgData;
     imageElement.onload = async () => {
@@ -49,7 +50,7 @@ export default function ColonCancerDetector(props) {
     fd.append('name',"Colon");
     console.log(fd);
     console.log("Requesest Sent");
-    axios.post("http://final5year.herokuapp.com/upload/",fd).then(
+    axios.post("https://final5year.herokuapp.com/upload/",fd).then(
       res=>{
         setFinished(true);
         console.log(res.data.message);

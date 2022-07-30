@@ -249,10 +249,11 @@ visibility: ${({shown}) => (shown ? "visible" : "hidden")};
 `;
 
 export const WindMillDots=styled.div`
-  position: relative;
+  position: absolute;
+  top:46%;
+  left:48%;
   width: 20px;
   height: 20px;
-  margin: 35% 50%;
   justify-content: center;
   border-radius: 10px;
   background-color: #9880ff;
